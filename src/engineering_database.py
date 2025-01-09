@@ -2,9 +2,6 @@ import streamlit as st
 import firebase_admin
 from firebase_admin import credentials, firestore
 from firebase_admin import db
-import os 
-import json 
-from google.oauth2 import service_account
 
 # firebase_certificate = 'engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json'
 
