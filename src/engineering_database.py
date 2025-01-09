@@ -75,10 +75,6 @@ with tab2:
 
 
 
-        # st.write(f"{info_ref.to_dict()}")
-
-
-
 
 
     
