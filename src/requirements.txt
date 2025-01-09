@@ -1,3 +1,6 @@
 streamlit
 firebase_admin
 db
+os
+json
+service_account
