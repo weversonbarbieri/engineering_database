@@ -5,9 +5,10 @@ from firebase_admin import db
 
 # firebase_certificate = 'engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json'
 
+firebase_certificate = 'src/engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json'
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate('src/engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json')
+    cred = credentials.Certificate(firebase_certificate)
     firebase_admin.initialize_app(cred)
 
 
