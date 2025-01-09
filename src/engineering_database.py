@@ -3,11 +3,13 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from firebase_admin import db
 
+firebase_certificate = 'engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json'
 
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate(r'https://github.com/weversonbarbieri/engineering_database/raw/master/src/engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json')
+    cred = credentials.Certificate(firebase_certificate)
     firebase_admin.initialize_app(cred)
+
 
 
 # Initialize Firestore
