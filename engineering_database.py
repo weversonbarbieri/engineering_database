@@ -68,10 +68,10 @@ with tab2:
 
     info_dict = info_ref.to_dict()
     issue = info_dict.get('Issue', '')
-    information_clear = info_dict.get('Information', '')
+    information_added = info_dict.get('Information', '')
 
     st.write(f"Issue: {issue}")
-    st.write(f"Information: {information_clear}")
+    st.write(f"Information: {information_added}")
 
 
 
