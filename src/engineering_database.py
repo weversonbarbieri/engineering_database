@@ -15,6 +15,7 @@ if not firebase_admin._apps:
 # Initialize Firestore
 db = firestore.client()
 
+@st.cache_data
 # Function to add text to Firestore
 def add_text(issue, information):
     doc_ref = db.collection(make_name).document(subject)
