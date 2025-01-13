@@ -3,12 +3,10 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from firebase_admin import db
 
-# firebase_certificate = 'engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json'
 
-firebase_certificate = 'src/engineering-database-fs1-firebase-adminsdk-38sc1-c22043566d.json'
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate(firebase_certificate)
+    cred = credentials.Certificate(st.secrets["firebase"]["private_key"])
     firebase_admin.initialize_app(cred)
 
 
@@ -33,7 +31,7 @@ tab1, tab2 = st.tabs(["Enter Information", "Information Updated"])
 # updated_date = st.sidebar.date_input("Enter the data you updated the information")
 with tab1:
 
-    make_options = ['All Makes', 'Chevrolet', 'Ford', 'GMC', 'information']
+    make_options = ['All Makes', 'Chevrolet', 'Chrysler', 'Ford', 'GMC', 'information']
     make_name = st.selectbox('Make', make_options)
 
     subjects_options = ['Programming Issues', 'DTCs', 'Security System']
@@ -77,16 +75,6 @@ with tab2:
 
     st.write(f"Issue: {issue}")
     st.write(f"Information: {information_added}")
-
-# #######
-
-
-
-    
-
-
-# python -m streamlit run 'C:\Language_Projects\Language_Projects\Python\Flagship_1\engineering_database\engineering_database.py'
-
 
 
 
