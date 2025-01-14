@@ -77,3 +77,6 @@ with tab2:
 
     st.write(f"Issue: {issue}")
     st.write(f"Information: {information_added}")
+
+
+# python -m streamlit run 'C:\Language_Projects\Language_Projects\Python\Flagship_1\engineering_database\src\engineering_database.py'
