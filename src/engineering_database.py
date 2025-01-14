@@ -5,7 +5,7 @@ from firebase_admin import db
 import json
 
 with open("textkey") as k:
-    key_dict = json.loads(st.secrets["textkey"])
+    key_dict = json.loads(st.secrets["k"])
 # Initialize Firebase
 if not firebase_admin._apps:
     cred = credentials.Certificate(key_dict)
