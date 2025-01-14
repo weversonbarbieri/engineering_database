@@ -2,11 +2,13 @@ import streamlit as st
 import firebase_admin
 from firebase_admin import credentials, firestore
 from firebase_admin import db
+import json
 
 
+key_dict = json.loads(st.secrets["textkey"])
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate(st.secrets["firebase"]["project_settings"])
+    cred = credentials.Certificate(key_dict)
     firebase_admin.initialize_app(cred)
 
 
@@ -75,6 +77,3 @@ with tab2:
 
     st.write(f"Issue: {issue}")
     st.write(f"Information: {information_added}")
-
-
-
